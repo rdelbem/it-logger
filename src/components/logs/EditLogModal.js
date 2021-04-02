@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import M from "materialize-css/dist/js/materialize.min.js";
 
-export default function AddLogModal() {
+export default function EditLogModal() {
   const [message, setMessage] = useState("");
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState("");
@@ -11,6 +11,8 @@ export default function AddLogModal() {
     if (message === "" || tech === "") {
       M.toast({ html: "Please enter a message and a tech" });
     } else {
+      //
+
       //clear
       setMessage("");
       setTech("");
@@ -19,7 +21,7 @@ export default function AddLogModal() {
   };
 
   return (
-    <div id="add-log-modal" className="modal" style={modalStyle}>
+    <div id="edit-log-modal" className="modal" style={modalStyle}>
       <div className="modal-content">
         <h4>Enter Log</h4>
 
